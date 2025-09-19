@@ -8,7 +8,11 @@ dotenv.config()
 const PORT = process.env.PORT;
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://your-frontend.vercel.app', 
+  methods: ['GET','POST']
+}));
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
