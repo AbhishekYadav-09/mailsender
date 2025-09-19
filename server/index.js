@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://abhiportfolio-sand.vercel.app"
+    "https://abhishekportfolio-eta.vercel.app/"
   ],
   methods: ["GET", "POST"],
 }));
