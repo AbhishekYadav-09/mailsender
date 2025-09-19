@@ -9,12 +9,13 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(bodyParser.json());
 
-app.use(
-  cors({
-    origin: "https://abhiportfolio-sand.vercel.app",
-    methods: ["GET", "POST"],
-  })
-);
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://abhiportfolio-sand.vercel.app"
+  ],
+  methods: ["GET", "POST"],
+}));
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
