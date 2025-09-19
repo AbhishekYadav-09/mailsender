@@ -5,7 +5,7 @@ import nodemailer from "nodemailer"
 import dotenv from "dotenv"
 
 dotenv.config()
-
+const PORT = process.env.PORT;
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
@@ -41,4 +41,6 @@ app.post("/send", (req, res) => {
   });
 });
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+app.listen(PORT, () =>{
+  console.log(`server at running PORT ${PORT}`)
+});
