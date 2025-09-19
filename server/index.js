@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({
-  origin: 'https://your-frontend.vercel.app', 
+  origin: 'https://abhiportfolio-sand.vercel.app/', 
   methods: ['GET','POST']
 }));
 
